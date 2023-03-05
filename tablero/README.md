@@ -1,7 +1,9 @@
 # Tablero
 
-This project can be used as a starting point to create your own Vaadin application with Spring Boot.
-It contains all the necessary configuration and some placeholder files to get you started.
+Ejemplo de como hacer un tablero usando botones con vaadin, cada boton cambia su color de fondo y emite una notification cuando es presionado.
+
+![preview](ss1.png)
+
 
 ## Running the application
 
