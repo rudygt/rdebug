@@ -1,7 +1,13 @@
 # RegexEditor
 
-This project can be used as a starting point to create your own Vaadin application with Spring Boot.
-It contains all the necessary configuration and some placeholder files to get you started.
+Ejemplo simple de como validar input del usuario, en este caso expresiones regulares y como conectar eventos para ejecutar dicha expresion regular sobre el texto de prueba. 
+
+
+![preview](ss1.png)
+
+### usage demo
+
+![demo](demo.gif)
 
 ## Running the application
 
