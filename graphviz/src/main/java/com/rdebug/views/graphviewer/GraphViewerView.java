@@ -38,10 +38,22 @@ public class GraphViewerView extends HorizontalLayout {
     public GraphViewerView() {
 
         inputGraph = new TextArea("Graph");
-        inputGraph.setValue("digraph G {\n" +
-                "  \"Welcome\" -> \"To\"\n" +
-                "  \"To\" -> \"Web\"\n" +
-                "  \"To\" -> \"GraphViz!\"\n" +
+        inputGraph.setValue("digraph PCB {\n" +
+                "    rankdir=LR;\n" +
+                "    node [shape=box, style=filled, fillcolor=lightblue];\n" +
+                "\n" +
+                "    New [label=\"New\"];\n" +
+                "    Ready [label=\"Ready\"];\n" +
+                "    Running [label=\"Running\"];\n" +
+                "    Blocked [label=\"Blocked\"];\n" +
+                "    Exit [label=\"Exit\"];\n" +
+                "\n" +
+                "    New -> Ready [label=\"Admitted\"];\n" +
+                "    Ready -> Running [label=\"Scheduled\"];\n" +
+                "    Running -> Ready [label=\"Interrupt\"];\n" +
+                "    Running -> Blocked [label=\"I/O or Event Wait\"];\n" +
+                "    Running -> Exit [label=\"Exit\"];\n" +
+                "    Blocked -> Ready [label=\"I/O or Event Completion\"];\n" +
                 "}\n");
         inputGraph.setSizeFull();
 
@@ -50,7 +62,6 @@ public class GraphViewerView extends HorizontalLayout {
         p = new Parser();
         drawButton.addClickListener(e -> {
             try {
-
 
                 MutableGraph g = p.read(inputGraph.getValue());
 

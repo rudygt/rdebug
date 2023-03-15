@@ -1,7 +1,10 @@
-# GraphViz
+# GraphViz Graph Viewer with Vaadin
 
-This project can be used as a starting point to create your own Vaadin application with Spring Boot.
-It contains all the necessary configuration and some placeholder files to get you started.
+in this project I used a java backend graphviz library to generate a graph image using dot and stream the content to the browser. 
+
+![demo.gif](demo.gif)
+
+![ss1.png](ss1.png)
 
 ## Running the application
 
