@@ -1,0 +1,28 @@
+05/10/2010 -- http://rdebug.blogspot.com/
+
+
+
+como hacer un juego en ensamblador
+
+modo 13h de la interrupcion 10h
+
+resolucion 320 * 200 
+
+este ejemplo es basicamente una plantilla de juego
+
+con doble buffer (dibujado en memoria)
+
+funcion para retardo (delay, con la funcion 86h de la interrupcion 15h)
+
+sincronizacion vertical (vsync, para evitar parpadeos)
+
+y control de eventos del teclado, forma basica una tecla a la vez
+
+el juego tiene un ciclo de render activo, con un valor constante de FPS 
+
+
+control con las teclas A W D y X 
+
+cambio del color de fondo con C 
+
+y salir del programa con B 
